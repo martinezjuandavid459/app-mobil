@@ -249,7 +249,7 @@ const styles = StyleSheet.create({
     letterSpacing: 2,
   },
   
-  /* ESTILOS DEL NUEVO BENTO BOX */
+  
   bentoContainer: {
     flexDirection: "row",
     flexWrap: "wrap",
@@ -267,7 +267,7 @@ const styles = StyleSheet.create({
     height: 120,
   },
   cardMitad: {
-    width: "48%", // Esto pone dos tarjetas en la misma fila
+    width: "48%", 
     height: 160,
   },
   cardHeader: {
@@ -279,8 +279,7 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     borderRadius: 12,
-    backgroundColor: "rgba(225, 6, 0, 0.15)", // Rojo sutil
-    justifyContent: "center",
+    backgroundColor: "rgba(225, 6, 0, 0.15)", 
     alignItems: "center",
   },
   icono: {
@@ -305,7 +304,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     lineHeight: 16,
   },
-  /* FIN BENTO BOX */
+  
 
   destacado: {
     backgroundColor: "#E10600", 

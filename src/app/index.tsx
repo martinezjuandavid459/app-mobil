@@ -79,22 +79,23 @@ export default function Inicio() {
           variante="completa"
           onPress={() => router.push("/formulario")}
         />
-        
-        <OpcionMenu
-          icono="🧢"
-          titulo="Catálogo"
-          descripcion="Gorras y chaquetas."
-          variante="mitad"
+       <Pressable 
+          style={styles.botonTarjeta} 
           onPress={() => router.push("/imagenes")}
-        />
-        
-        <OpcionMenu
-          icono="📍"
-          titulo="Sedes"
-          descripcion="Nuestras tiendas."
-          variante="mitad"
+        >
+          <Text style={styles.botonTarjetaIcono}>👕</Text>
+          <Text style={styles.botonTarjetaTexto}>Catálogo</Text>
+        </Pressable>
+
+        <Pressable 
+          style={styles.botonTarjeta} 
           onPress={() => router.push("/contacto")}
-        />
+        >
+          <Text style={styles.botonTarjetaIcono}>📍</Text>
+          <Text style={styles.botonTarjetaTexto}>Sedes</Text>
+        </Pressable>
+        
+        
       </View>
 
 
@@ -116,6 +117,39 @@ export default function Inicio() {
 }
 
 const styles = StyleSheet.create({
+  botonTarjeta: {
+    backgroundColor: "#1A1A24", 
+    width: "48%",               
+    height: 110,                
+    borderRadius: 20,           
+    padding: 16,
+    justifyContent: "center",
+    alignItems: "center",
+    marginBottom: 12,
+  },
+  botonTarjetaIcono: {
+    fontSize: 28,
+    marginBottom: 10,
+  },
+  botonTarjetaTexto: {
+    color: "#FFFFFF",
+    fontWeight: "bold",
+    fontSize: 15,
+  },
+  
+  button: {
+    backgroundColor: '#1E1E24',  
+    flex: 1,              
+    paddingVertical: 14,  
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  buttonText: {
+    color: '#FFFFFF',
+    fontWeight: 'bold',
+    fontSize: 14,
+  },
   container: {
     flexGrow: 1,
     backgroundColor: "#0D0D12",

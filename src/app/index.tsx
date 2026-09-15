@@ -79,6 +79,7 @@ export default function Inicio() {
           variante="completa"
           onPress={() => router.push("/formulario")}
         />
+       <View style={styles.botonesFila}>
        <Pressable 
           style={styles.botonTarjeta} 
           onPress={() => router.push("/imagenes")}
@@ -94,7 +95,16 @@ export default function Inicio() {
           <Text style={styles.botonTarjetaIcono}>📍</Text>
           <Text style={styles.botonTarjetaTexto}>Sedes</Text>
         </Pressable>
-        
+
+        <Pressable 
+          style={styles.botonTarjeta} 
+          onPress={() => router.push("/formulario")}
+        >
+          <Text style={styles.botonTarjetaIcono}>�</Text>
+          <Text style={styles.botonTarjetaTexto}>Formulario</Text>
+        </Pressable>
+       
+        </View>
         
       </View>
 
@@ -117,15 +127,24 @@ export default function Inicio() {
 }
 
 const styles = StyleSheet.create({
+  botonesFila: {
+    flexDirection: "row", 
+    justifyContent: "center",
+    alignItems: "center",
+            
+    gap: 12,             
+  },
   botonTarjeta: {
+    
     backgroundColor: "#1A1A24", 
-    width: "48%",               
-    height: 110,                
+    width: "30%",               
+    height: 100,                
     borderRadius: 20,           
     padding: 16,
     justifyContent: "center",
     alignItems: "center",
     marginBottom: 12,
+    
   },
   botonTarjetaIcono: {
     fontSize: 28,
